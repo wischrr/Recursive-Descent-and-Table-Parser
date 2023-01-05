@@ -9,7 +9,31 @@ gcc -std=c99 -Wall -Werror ./bits.c -o bits
 How to run:
 ./bits
 
-How to use: 
+
+
+LL(1) grammar of bitstring expressions:
+
+⟨E⟩ → ⟨T⟩ ⟨ET⟩
+⟨ET⟩ → | ⟨E⟩ | ϵ
+⟨T⟩ → ⟨F⟩ ⟨TT⟩
+⟨TT⟩ → & ⟨T⟩ | ϵ
+⟨F⟩ → ~ ⟨F⟩ | ( ⟨E⟩ ) | ⟨S⟩
+⟨S⟩ → ⟨B⟩ ⟨ST⟩
+⟨ST⟩ → ⟨S⟩ | ϵ
+⟨B⟩ → 0 | 1
+
+Sample input of valid expressions (for both parts):
+
+1
+101010
+~010
+~~100
+10&01
+1|00&111
+(101|001)&(11|00)
+~(101|010)
+
+
 
 Part 1: Recursive-descent parser
 
