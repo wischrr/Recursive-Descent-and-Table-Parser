@@ -1,8 +1,5 @@
 # Recursive-Descent-and-Table-Parser
 
-Elias Haddad 
-Mason Wischhover 
-
 How to build:
 gcc -std=c99 -Wall -Werror ./bits.c -o bits
 
