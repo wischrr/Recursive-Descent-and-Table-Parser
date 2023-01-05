@@ -11,13 +11,22 @@ How to run:
 LL(1) grammar of bitstring expressions:
 
 ⟨E⟩ → ⟨T⟩ ⟨ET⟩
+
 ⟨ET⟩ → | ⟨E⟩ | ϵ
+
 ⟨T⟩ → ⟨F⟩ ⟨TT⟩
+
 ⟨TT⟩ → & ⟨T⟩ | ϵ
+
 ⟨F⟩ → ~ ⟨F⟩ | ( ⟨E⟩ ) | ⟨S⟩
+
 ⟨S⟩ → ⟨B⟩ ⟨ST⟩
+
 ⟨ST⟩ → ⟨S⟩ | ϵ
+
 ⟨B⟩ → 0 | 1
+
+
 
 Sample input of valid expressions (for both parts):
 
@@ -36,6 +45,8 @@ Sample input of valid expressions (for both parts):
 (101|001)&(11|00)
 
 ~(101|010)
+
+
 
 
 
