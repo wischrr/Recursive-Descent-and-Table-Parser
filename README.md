@@ -22,12 +22,19 @@ LL(1) grammar of bitstring expressions:
 Sample input of valid expressions (for both parts):
 
 1
+
 101010
+
 ~010
+
 ~~100
+
 10&01
+
 1|00&111
+
 (101|001)&(11|00)
+
 ~(101|010)
 
 
